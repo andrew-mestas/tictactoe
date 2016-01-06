@@ -1,5 +1,7 @@
 body{
-	background: rgba(80,80,80,0.9);
+	background: #8E0E00; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #8E0E00 , #1F1C18); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #8E0E00 , #1F1C18); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	color:white;
 }
 
@@ -10,7 +12,7 @@ button{
 	border: none;
 	height:30px;
 	width: 90px;
-	border-radius: 4px;
+	border-radius: 0px 8px 0px 0px;
 	font-family: 'Titillium Web', sans-serif;
 	font-weight: bold;
 	color: white;
@@ -20,14 +22,18 @@ button{
 .col{
 	height: 80px;
 	width: 80px;
-	background-color:rgba(173,216,230,0.4);
-	margin: 4px 4px 4px 4px;
+	background: #525252; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #525252 , #3d72b4); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #525252 , #3d72b4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin: 4px 4px 4px 4px;
 	display: inline-block;
 	border-radius: 4px;
 }
 
 .col:hover{
-	background-color:rgba(0,0,250,0.4);
+	background: #abbaab; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #abbaab , #ffffff); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #abbaab , #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .row{

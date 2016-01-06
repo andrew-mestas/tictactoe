@@ -18,7 +18,7 @@ var reset = function(){
 
 	for(var i =0;i<9;i++)
 	{
-	    document.getElementsByClassName("col")[i].style.background = "rgba(173,216,230,0.4)";
+	    document.getElementsByClassName("col")[i].style.background = "linear-gradient(to left, #525252 , #3d72b4)";
 	}
 	totalClicks = 0;
 }
@@ -198,9 +198,11 @@ var checkWin = function(){
 	var outcome2 = 0;
 	var outcome3 = 0;
 	var outcome4 = 0;
-	var winner   = null;
+	var winner   = false;
 	data = [];
 
+	// outcome 3 up-left cross
+	// outcome 4 down-left cross
 	for(var i=2,t=0; i>=0;i--,t++){
 
 		 	switch(board[i][t])
@@ -234,7 +236,8 @@ var checkWin = function(){
 		}
 		   data.push(outcome3);
 		   data.push(outcome4);
-
+// outcome 1 for across
+// outcome 2 for up-down
 	for(var i=0;i<3;i++){
 		outcome1 = 0;
 		outcome2 = 0;
@@ -260,6 +263,7 @@ var checkWin = function(){
 		}
 		  data.push(outcome1);
 		  data.push(outcome2);
+
 	if(outcome1 == 3 || outcome2 == 3){
 	 winner = "X";
 	 break;
@@ -269,11 +273,17 @@ var checkWin = function(){
 	 break;
 	}
 	}
-
+		  console.log("1 " + outcome1);
+		  console.log("2 " + outcome2);
+		  console.log("3 " + outcome3);
+		  console.log("4 " + outcome4);
 		
 	console.log("winner ",winner);
-	if(winner == "O" || winner == "X")
+	if(winner == "O" || winner == "X"){
      return (winner + " Wins!");
+	} else {
+		return ['No one yet'];
+	}
 }
 
 var computerEasy = function(letter) {
